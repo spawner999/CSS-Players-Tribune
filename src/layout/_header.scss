@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.wrapper{
+  lost-center: 1200px .5em flex;
+
+}
+.header {
+  @include flex-container(100%, 80px, space-between);
+  padding: 0.5em;
+  a {
+    @include flex-container(100%, 100%, center, center);
+    img {
+      @include nested-img(200px);
+    }
+    color: black;
+
+  }
+}

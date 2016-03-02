@@ -1,0 +1,9 @@
+.hero {
+  padding: 0.5em;
+  @include flex-container(100%, 400px, flex-end, flex-start, column);
+  @include bg-img("../img/hero1.jpg", auto);
+  & > * {
+    color: white;
+    font-weight: 100;
+  }
+}

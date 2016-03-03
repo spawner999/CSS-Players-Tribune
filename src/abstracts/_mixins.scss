@@ -64,3 +64,8 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: $width $height;
 }
+
+@mixin col-width($width, $margin: 0px) {
+    width: calc(#{$width} - #{$margin});
+    margin: 0  $margin/2;
+}

@@ -4,6 +4,80 @@
   @include bg-img("../img/hero1.jpg", auto);
   & > * {
     color: white;
-    font-weight: 100;
   }
+}
+
+.trending {
+  @include flex-container(100%, 100%, center, center, column);
+  padding: .5em;
+  @extend %white-bg;
+  & > * {
+    font-weight: 200;
+    text-transform: uppercase;
+    h5 {
+      margin-bottom: .5em;
+    }
+  }
+}
+
+.lineup {
+  @include flex-container(90%, 100%, center, center, column);
+  margin: 1em auto;
+  @media screen and (min-width: 600px) {
+    flex-flow: row wrap;
+  }
+  @extend %section-header;
+  .snippet {
+    @media screen and (min-width: 600px) {
+      @include col-width(50%, 20px);
+    }
+    .img {
+      height: 200px;
+      @include bg-img("../img/article.png");
+    }
+    @extend %snippet;
+    }
+}
+
+.voice {
+  @extend %white-bg;
+  @include flex-container(100%, 100%, center, center, column);
+  padding: 2em 0;
+  form {
+    @include col-width(80%);
+    input {
+      @include col-width(100%);
+      ::input-placeholder{
+        color: red;
+      }
+    }
+    select {
+      @include col-width(100%);
+      border: 1px solid darken($text-color, 30%);
+      margin: .5em 0;
+    }
+    button{
+      @include col-width(100%);
+      @extend %black-bg;
+    }
+  }
+}
+
+.story {
+  margin: 1em auto;
+  @include flex-container(100%, 100%, center, center, column);
+  @extend %section-header;
+  .full{
+    @extend %snippet;
+    @include col-width(100%);
+    .img{
+      height: 180px;
+      @include bg-img("../img/story.jpg");
+      @media screen and (min-width: 600px) {
+        height: 450px;
+      }
+    }
+
+  }
+
 }

@@ -43,7 +43,7 @@
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
-.visually-hidden { 
+.visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -52,4 +52,25 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+%snippet {
+  padding-top: 1em;
+  width: 100%;
+  h6{
+    margin-top: .5em;
+    text-transform: uppercase;
+    span{
+      letter-spacing: 1px;
+      color: darken($text-color, 30%);;
+    }
+  }
+}
+
+%section-header {
+  h5 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

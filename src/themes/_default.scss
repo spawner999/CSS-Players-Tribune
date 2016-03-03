@@ -2,3 +2,12 @@
 // When having several themes, this file contains everything related to the
 // default one.
 // -----------------------------------------------------------------------------
+%white-bg{
+  background-color: #f5f2f2;
+  color: #808080;
+}
+
+%black-bg{
+  background-color: black;
+  color: #f5f2f2;
+}

@@ -1,9 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-
+.inner-wrapper{
+  @media screen and (min-width: 1000px) {
+      @include col-width(85%);
+  }
+}
 .wrapper{
-  lost-center: 1200px .5em flex;
+  @include flex-container(100%, 100%, center, flex-start, row);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .header {

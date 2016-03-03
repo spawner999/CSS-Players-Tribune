@@ -441,13 +441,13 @@ body {
   position: absolute;
   width: 1px; }
 
-.lineup .snippet, .story .full {
+.lineup .snippet, .story .full, .sidebar .snippet {
   padding-top: 1em;
   width: 100%; }
-  .lineup .snippet h6, .story .full h6 {
+  .lineup .snippet h6, .story .full h6, .sidebar .snippet h6 {
     margin-top: .5em;
     text-transform: uppercase; }
-    .lineup .snippet h6 span, .story .full h6 span {
+    .lineup .snippet h6 span, .story .full h6 span, .sidebar .snippet h6 span {
       letter-spacing: 1px;
       color: #b3b3b3; }
 
@@ -456,12 +456,33 @@ body {
   text-align: center;
   text-transform: uppercase; }
 
+@media screen and (min-width: 1000px) {
+  .inner-wrapper {
+    width: calc(85% - 0px);
+    margin: 0 0px; } }
+
 .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: auto; }
 
 .header {
   width: 100%;
@@ -610,8 +631,6 @@ body {
     .voice form input {
       width: calc(100% - 0px);
       margin: 0 0px; }
-      .voice form input ::input-placeholder {
-        color: red; }
     .voice form select {
       width: calc(100% - 0px);
       margin: 0 0px;
@@ -623,6 +642,7 @@ body {
 
 .story {
   margin: 1em auto;
+  text-align: center;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -655,13 +675,48 @@ body {
         .story .full .img {
           height: 450px; } }
 
+.sidebar {
+  display: none; }
+  @media screen and (min-width: 1000px) {
+    .sidebar {
+      padding: 28px .5em;
+      width: 25%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      display: block; }
+      .sidebar .snippet .img {
+        height: 200px;
+        background-image: url("../img/russell.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%; }
+      .sidebar h3 {
+        text-align: center;
+        color: black; } }
+
 .footer {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 80px;
+  height: 160px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -679,9 +734,10 @@ body {
   .footer h5 {
     font-weight: 200; }
   .footer a {
+    font-size: 1.5em;
     color: black; }
 
-.header, .trending, .voice, .footer {
+.header, .trending, .voice, .sidebar, .footer {
   background-color: #f5f2f2;
   color: #808080; }
 

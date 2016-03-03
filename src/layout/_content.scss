@@ -47,9 +47,6 @@
     @include col-width(80%);
     input {
       @include col-width(100%);
-      ::input-placeholder{
-        color: red;
-      }
     }
     select {
       @include col-width(100%);
@@ -65,6 +62,7 @@
 
 .story {
   margin: 1em auto;
+  text-align: center;
   @include flex-container(100%, 100%, center, center, column);
   @extend %section-header;
   .full{
@@ -76,6 +74,27 @@
       @media screen and (min-width: 600px) {
         height: 450px;
       }
+    }
+  }
+}
+
+.sidebar {
+  display: none;
+  @media screen and (min-width: 1000px) {
+    padding: 28px .5em;
+    @include flex-container(25%, 100%, center, center, row);
+    display: block;
+    @extend %white-bg;
+    .snippet{
+      @extend %snippet;
+      .img{
+        height: 200px;
+        @include bg-img("../img/russell.jpg")
+      }
+    }
+    h3{
+      text-align: center;
+      color: black;
     }
 
   }

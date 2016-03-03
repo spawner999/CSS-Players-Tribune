@@ -2,13 +2,14 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer{
-  @include flex-container(100%, 80px, space-between, center);
+  @include flex-container(100%, 160px, space-between, center);
   @extend %white-bg;
   padding: 1em;
   h5{
     font-weight: 200;
   }
   a{
+    font-size: 1.5em;
     color: black;
   }
 }
